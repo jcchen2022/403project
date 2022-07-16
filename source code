@@ -1,0 +1,29 @@
+import os
+user = os.getlogin()
+print(user)
+import datetime
+x = datetime.datetime.now()
+print(x.strftime("%B %d, %Y @ %H:%M:%S \n"))
+
+def main():
+    name = input("Enter name: ")
+    employee_name = input("Enter the employee's name: ")
+    id_number = input("Enter the ID number: ")
+    number_of_shifts = input("Enter the shift number: ")
+    hourly_pay = int(input("Enter the hourly pay rate: "))
+    print(f"{name.capitalize()}, here is the production worker, {employee_name.title()}'s information:")
+
+    worker_info(name, employee_name, id_number,number_of_shifts,hourly_pay)
+
+def worker_info(name, employee_name,id_number,number_of_shifts,hourly_pay):
+    print(f"Name: {employee_name.capitalize()}")
+    print(f"ID number: {id_number}")
+    print(f"Shift: {number_of_shifts}")
+    currency = "${:,.2f}".format(hourly_pay)
+    print(f"Hourly Pay Rate: {currency}")
+    # name = "Name: " + name
+    # id_number =
+
+    # return null
+
+main()
